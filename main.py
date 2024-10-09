@@ -5,12 +5,12 @@ import ollama
 client = Client(host="http://localhost:11434")
 
 reference_models = [
-    "mistral-nemo",
-    "hermes3",
-    "phi3",
-    "aya",
+    "llama3.2:3b",
+    "llama3.2:1b",
+    "mistral-small:latest",
+    "qwen2.5:32b",
 ]
-aggregator_model = "dolphin-llama3"
+aggregator_model = "mistral-small:latest"
 aggreagator_system_prompt = """
     You have been provided with a set of responses from various open-source models
     to the latest user query. Your task is to synthesize these responses into a single,
